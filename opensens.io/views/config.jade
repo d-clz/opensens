@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Configuring MFO devices and methods
+  select(name='dropDown', id='Device')
+    each port in ports
+        option=port
+  select(name='dropDown', id='Baudrate')
+    each val in [9600, 112500]
+        option=val
