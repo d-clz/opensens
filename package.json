@@ -1,20 +1,16 @@
 {
-  "name": "opensense",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "opensens.io",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/d-clz/opensense.git"
-  },
-  "author": "dclz (Duong Hoang)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/d-clz/opensense/issues"
-  },
-  "homepage": "https://github.com/d-clz/opensense#readme",
-  "dependencies": {}
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "^1.9.2",
+    "morgan": "~1.9.1"
+  }
 }
