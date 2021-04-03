@@ -3,9 +3,23 @@ extends layout
 block content
   h1= title
   p Configuring MFO devices and methods
-  select(name='dropDown', id='Device')
-    each port in ports
-        option=port
-  select(name='dropDown', id='Baudrate')
-    each val in [9600, 112500]
-        option=val
+
+  div.container
+    p Device configurations:
+    select(name='port', id='dropDown')
+      each port in portList
+        option(value=port.portList) #{port}
+    select(name='baudrate', id='dropDown')
+      each baud in [9600, 112500]
+        option(value=baud) #{baud}
+
+  div.container
+    p Method configurations:
+    select(name='methods', id='dropDown')
+      each method in ['CV', 'SWV', 'LMP', 'AMP', 'DVP', 'EIS']
+        option(value=method) #{method}
+
+  div.container
+    p Initiated values configurations:
+
+  a(href="start/" + port + "/" + baud): button(type="button") Start
