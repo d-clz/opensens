@@ -1,5 +1,5 @@
 {
-  serialconnect{
+  serialconnect {
     port: null,
     baudrate: null
   }

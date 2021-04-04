@@ -9,9 +9,12 @@ router.get('/', async function(req, res, next) {
 	//     ...
 	// ])
 	var portList = await serialPort.getConnected()
+	console.log(portList)
 	res.render('config', {
 		title: 'MFO Config',
-		ports: portList
+		ports: portList,
+		baudrates: [9600, 115200],
+		methods: ['CV', 'SWV', 'LMP', 'AMP', 'DVP', 'EIS']
 	})
 });
 

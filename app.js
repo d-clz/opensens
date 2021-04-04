@@ -25,6 +25,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/config', configRouter);
 app.use('/start', startRouter);
+app.post('/submit', function(req, res) {
+	console.log(req.body);
+	res.send(req.body)
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
