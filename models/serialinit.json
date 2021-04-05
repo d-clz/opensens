@@ -1,0 +1,14 @@
+{
+  serialconnect {
+    port: null,
+    baudrate: null
+  }
+  method {
+    name: null,
+    autorun: true,
+    initvalue {
+      startV: null,
+      endV: null
+    }
+  }
+}

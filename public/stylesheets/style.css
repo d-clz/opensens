@@ -4,5 +4,31 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #00B3B0;
+}
+
+.dropdown {
+    background-color:
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4B4B4B;
+    min-width: inherit;
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: flex;
+    clear: both;
 }
