@@ -12,6 +12,7 @@
     "http-errors": "~1.6.3",
     "jade": "^0.31.2",
     "morgan": "~1.9.1",
-    "serialport": "^9.0.7"
+    "serialport": "^9.0.7",
+    "ws": "^7.5.3"
   }
 }

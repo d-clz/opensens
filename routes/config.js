@@ -12,7 +12,8 @@ router.get('/', async function(req, res, next) {
 	console.log(portList)
 	res.render('config', {
 		title: 'MFO Config',
-		ports: portList,
+		// ports: portList,
+		ports: '/dev/tnt1',
 		baudrates: [9600, 115200],
 		methods: ['CV', 'SWV', 'LMP', 'AMP', 'DVP', 'EIS']
 	})

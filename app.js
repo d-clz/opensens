@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var configRouter = require('./routes/config');
 var startRouter = require('./routes/start');
+var plotRouter = require('./routes/plot');
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/config', configRouter);
 app.use('/start', startRouter);
+app.use('/plot', plotRouter);
 app.post('/submit', function(req, res) {
 	console.log(req.body);
 	res.send(req.body)
